@@ -10,7 +10,7 @@
         println(numbers[idx])
  */
 
-fun lastLocalMaxInd(numbers: Collection<Int>): Int {
+fun lastLocalMaxInd(numbers: List<Int>): Int {
     TODO()
 }
 

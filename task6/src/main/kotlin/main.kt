@@ -1,3 +1,9 @@
+/*
+
+Изучите имеющийся код для работы с матрицами в Kotlin (простой, но не очень эффективный).
+Реализуйте функции printMatrix и sumOfMatrices.
+ */
+
 fun<T> assertCorrectMatrixSize(m: Array<Array<T>>) {
     assert(m.isNotEmpty())
     val cols = m[0].size
@@ -14,10 +20,12 @@ fun<T> assertSameSizeOfMatrices(m1: Array<Array<T>>, m2: Array<Array<T>>) {
 
 fun<T> createMatrixOfSameSize(m: Array<Array<T>>, default: T): Array<Array<T>> {
     assertCorrectMatrixSize(m)
-    val res = m.clone()
-    for(row in res.indices)
+    val res = m.copyOf()
+    for(row in res.indices) {
+        res[row] = m[0].copyOf()
         for(col in res[row].indices)
             res[row][col] = default
+    }
     return res
 }
 

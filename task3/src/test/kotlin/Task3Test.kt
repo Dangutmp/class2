@@ -6,7 +6,7 @@ class Task3Test {
     @Test
     fun deg2RadTest1() {
         assertEquals(PI, deg2rad(180.0), 1e-5)
-        assertEquals(PI, deg2rad(2*360 + 180.0), 1e-5)
+        assertEquals(5*PI, deg2rad(2*360 + 180.0), 1e-5)
     }
 
     @Test
